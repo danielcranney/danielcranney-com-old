@@ -1,0 +1,315 @@
+/* ----------------------------
+SCROLL BEHAVIOUR
+---------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------
+THEME COLOURS
+---------------------------- */
+:root {
+  --dark-color: #1c242e;
+  --brand-color: #00a5e1;
+  --brand-color-darker: #0085B5;
+  --grey-color: #757A80;
+  --light-grey-color: #F7F8F8;
+  --light-color: #ffffff;
+}
+
+/* ----------------------------
+FONT ANTIALIASING & TYPOGRAPHY
+---------------------------- */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--brand-color);
+  text-decoration: none;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+
+.btn-link {
+  color: var(--brand-color);
+}
+
+.btn-link:hover {
+  color: var(--brand-color-darker);
+}
+
+/* ----------------------------
+SITE STRUCTURE
+---------------------------- */
+body {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  position: relative;
+}
+
+.outer-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow:1;
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.section-content {
+  width: 100%;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.section-title {
+  width: 100%;
+  padding: 10px;
+}
+
+
+.about-splash {
+  min-height: calc(100vh);
+  padding-top: 63px;
+  display: flex;
+  align-items: center;
+}
+
+.my-work-splash, .my-cv-splash {
+  padding: 120px 0px 90px 0px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ----------------------------
+COMPONENT OVERRIDES
+---------------------------- */
+.btn-primary {
+  color: #fff;
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: var(--brand-color-darker);
+  border-color: var(--brand-color-darker);
+}
+
+/* ----------------------------
+NAVIGATION & FOOTER LINKS
+---------------------------- */
+nav {
+  background-color: var(--dark-color);
+  min-height: 50px;
+}
+.nav {
+  margin-left: 0;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar {
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+
+.navbar .container {
+  justify-content: center;
+  display: flex;
+}
+
+/* Standard Nav Links */
+.nav-item a, footer a {
+  color: var(--grey-color);
+}
+
+/* Nav Links Hover and Focus */
+.nav-item a:focus, .nav-item a:hover, footer a:focus, footer a:hover {
+  color: var(--light-color);
+}
+
+/* Logo */
+.navbar-brand {
+  color: #fff;
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: var(--brand-color);
+}
+
+
+/* ----------------------------
+DARK SECTION STYLES
+---------------------------- */
+.dark-section h3 {
+  color: var(--grey-color);
+}
+
+.dark-section h4 {
+  margin-bottom: 1.3rem;
+}
+
+.dark-section h4 strong {
+  color: var(--brand-color);
+  font-weight: 400;
+}
+
+.dark-section p a.btn {
+  margin-right: 8px;
+}
+
+/* ----------------------------
+LIGHT SECTION STYLES
+---------------------------- */
+.light-section {
+  background-color: var(--light-color);
+}
+.light-section h3 {
+  color: var(--brand-color);
+}
+
+.light-section h4 {
+  color: var(--grey-color);
+}
+
+.light-section p {
+  color: var(--grey-color);
+}
+
+/* ----------------------------
+MID SECTION STYLES
+---------------------------- */
+.mid-section {
+  background-color: var(--light-grey-color);
+  color: var(--grey-color)
+}
+
+.mid-section h3, .mid-section h4, .mid-section h5 {
+  color: var(--grey-color);
+}
+
+.mid-section h4 {
+  margin-bottom: 1.3rem;
+  color: var(--brand-color);
+}
+
+.mid-section h5 {
+  color: var(--grey-color);
+  margin-top: 1rem;
+}
+
+.mid-section p a.btn {
+  margin-right: 8px;
+}
+
+/* ----------------------------
+EXPERIENCE STYLES
+---------------------------- */
+.item {
+  display:flex;
+  border-top: 1px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-style: solid;
+;
+}
+
+
+.item .w-25 {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+/* ----------------------------
+FOOTER
+---------------------------- */
+footer {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  margin-bottom: 0px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+/* ----------------------------
+MEDIA QUERIES
+---------------------------- */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .inner {
+    flex-direction: row;
+  }
+
+  .navbar .container {
+    justify-content: flex-start;
+  }
+
+  .nav {
+    margin-left: auto;
+  }
+
+  .section-content {
+    width: 75%;
+    margin-right: 50px;
+    padding: 0px;
+  }
+  
+  .section-title {
+    width: 25%;
+    padding: 0px;
+  }
+
+  .my-work-splash, .my-cv-splash {
+    padding: 100px 0px;
+  }
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
