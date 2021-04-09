@@ -88,7 +88,7 @@ main {
   align-items: center;
 }
 
-.my-work-splash, .my-cv-splash {
+.my-work-splash, .my-skills-splash, .my-cv-splash {
   padding: 120px 0px 90px 0px;
   display: flex;
   align-items: flex-start;
@@ -163,13 +163,23 @@ DARK SECTION STYLES
 }
 
 .dark-section h4 {
+  color: var(--brand-color);
   margin-bottom: 1.3rem;
+}
+
+.dark-section h3, .dark-section h5 {
+  color: var(--light-color);
 }
 
 .dark-section h4 strong {
   color: var(--brand-color);
   font-weight: 400;
 }
+
+.dark-section p {
+  color: var(--grey-color);
+}
+
 
 .dark-section p a.btn {
   margin-right: 8px;
@@ -220,7 +230,7 @@ MID SECTION STYLES
 }
 
 /* ----------------------------
-EXPERIENCE STYLES
+TABLE STYLES
 ---------------------------- */
 .item {
   display:flex;
@@ -228,15 +238,29 @@ EXPERIENCE STYLES
   border-bottom: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-color: rgba(0, 0, 0, 0.1);
   border-style: solid;
-;
+  padding-top: 1em;
 }
 
+.dark-section .item {
+  border-color: rgba(255, 255, 255, 0.1);
+}
 
-.item .w-25 {
+.mid-section .item {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.table-main {
+  width: 75%;
+}
+
+/* .table-main p {
+
+} */
+
+.table-side {
+  width: 25%;
   text-align: right;
-  margin-top: 1rem;
 }
 
 /* ----------------------------
