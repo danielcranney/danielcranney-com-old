@@ -32,6 +32,12 @@ a {
   transition: 0.3s;
 }
 
+a:hover, a:focus {
+  color: var(--brand-color-darker);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
 
 .btn-link {
   color: var(--brand-color);
@@ -71,7 +77,6 @@ main {
 
 .section-content {
   width: 100%;
-  margin-right: 50px;
   padding: 10px;
 }
 
@@ -116,9 +121,6 @@ nav {
   background-color: var(--dark-color);
   min-height: 50px;
 }
-.nav {
-  margin-left: 0;
-}
 .navbar-collapse {
   flex-grow: 0;
 }
@@ -129,7 +131,7 @@ nav {
 }
 
 .navbar .container {
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
 }
 
@@ -146,14 +148,30 @@ nav {
 /* Logo */
 .navbar-brand {
   color: #fff;
+  flex-grow: 1;
 }
-
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #fff;
-  background-color: var(--brand-color);
+  background-color: transparent
 }
 
+.nav-link {
+  padding: 0.5rem 0.5rem;
+}
+
+/* ----------------------------
+INTRO STYLES
+---------------------------- */
+.dark-section h4.intro {
+  color: var(--light-color);
+  margin-bottom: 1.3rem;
+}
+
+.dark-section h4.intro em {
+  color: var(--brand-color);
+  font-style: normal;
+}
 
 /* ----------------------------
 DARK SECTION STYLES
@@ -164,22 +182,19 @@ DARK SECTION STYLES
 
 .dark-section h4 {
   color: var(--brand-color);
-  margin-bottom: 1.3rem;
 }
 
-.dark-section h3, .dark-section h5 {
+.dark-section h5 {
   color: var(--light-color);
-}
-
-.dark-section h4 strong {
-  color: var(--brand-color);
-  font-weight: 400;
 }
 
 .dark-section p {
   color: var(--grey-color);
 }
 
+.dark-section .item {
+  border-color: rgba(255, 255, 255, 0.1);
+}
 
 .dark-section p a.btn {
   margin-right: 8px;
@@ -196,11 +211,15 @@ LIGHT SECTION STYLES
 }
 
 .light-section h4 {
-  color: var(--grey-color);
+  color: var(--dark-color);
 }
 
 .light-section p {
   color: var(--grey-color);
+}
+
+.light-section .item {
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ----------------------------
@@ -216,17 +235,13 @@ MID SECTION STYLES
 }
 
 .mid-section h4 {
-  margin-bottom: 1.3rem;
+  /* margin-bottom: 1.3rem; */
   color: var(--brand-color);
 }
 
 .mid-section h5 {
   color: var(--grey-color);
-  margin-top: 1rem;
-}
-
-.mid-section p a.btn {
-  margin-right: 8px;
+  /* margin-top: 1rem; */
 }
 
 /* ----------------------------
@@ -242,13 +257,6 @@ TABLE STYLES
   padding-top: 1em;
 }
 
-.dark-section .item {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.mid-section .item {
-  border-color: rgba(0, 0, 0, 0.1);
-}
 
 .table-main {
   width: 75%;
@@ -282,6 +290,148 @@ footer ul {
   margin: 0px;
 }
 
+/* ----------------------------
+ANIMATIONS
+---------------------------- */
+
+/* Slide Top */
+
+.slide-up-fade-in {
+  animation: slide-up-fade-in ease 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: slide-up-fade-in ease 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -moz-animation: slide-up-fade-in ease 1s;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: 50% 50%;
+  -moz-animation-fill-mode:forwards; /*FF 5+*/
+  -o-animation: slide-up-fade-in ease 1s;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: 50% 50%;
+  -o-animation-fill-mode:forwards; /*Not implemented yet*/
+  -ms-animation: slide-up-fade-in ease 1s;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: 50% 50%;
+  -ms-animation-fill-mode:forwards; /*IE 10+*/
+
+  opacity:0;
+  opacity: 1\9;
+
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+      opacity:0;
+      transform:  translate(0px,40px)  ;
+  }
+  100% {
+      opacity:1;
+      transform:  translate(0px,0px)  ;
+  }
+}
+
+@-moz-keyframes slide-up-fade-in {
+  0% {
+      opacity:0;
+      -moz-transform:  translate(0px,40px)  ;
+  }
+  100% {
+      opacity:1;
+      -moz-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes slide-up-fade-in {
+  0% {
+      opacity:0;
+      -webkit-transform:  translate(0px,40px)  ;
+  }
+  100% {
+      opacity:1;
+      -webkit-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-o-keyframes slide-up-fade-in {
+  0% {
+      opacity:0;
+      -o-transform:  translate(0px,40px)  ;
+  }
+  100% {
+      opacity:1;
+      -o-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-ms-keyframes slide-up-fade-in {
+  0% {
+      opacity:0;
+      -ms-transform:  translate(0px,40px)  ;
+  }
+  100% {
+      opacity:1;
+      -ms-transform:  translate(0px,0px)  ;
+  }
+} 
+
+/* Slide in from top */
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade in */
+.fade-in {
+	-webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 /* ----------------------------
 MEDIA QUERIES
@@ -290,6 +440,14 @@ MEDIA QUERIES
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
+  .nav {
+    margin-left: -0.4em;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
 }
 
@@ -299,17 +457,8 @@ MEDIA QUERIES
     flex-direction: row;
   }
 
-  .navbar .container {
-    justify-content: flex-start;
-  }
-
-  .nav {
-    margin-left: auto;
-  }
-
   .section-content {
     width: 75%;
-    margin-right: 50px;
     padding: 0px;
   }
   
@@ -325,6 +474,11 @@ MEDIA QUERIES
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
   
 }
 
