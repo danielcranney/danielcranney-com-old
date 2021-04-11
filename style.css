@@ -69,6 +69,11 @@ main {
   flex-grow:1;
 }
 
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .inner {
   display: flex;
   align-items: flex-start;
@@ -77,12 +82,11 @@ main {
 
 .section-content {
   width: 100%;
-  padding: 10px;
 }
 
 .section-title {
   width: 100%;
-  padding: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -458,6 +462,11 @@ MEDIA QUERIES
 
   .page-section {
     padding: 100px 0px;
+  }
+
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
 }
