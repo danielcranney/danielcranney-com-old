@@ -88,13 +88,12 @@ main {
 
 .about-splash {
   min-height: calc(100vh);
-  padding-top: 63px;
+  padding-top: 50px;
   display: flex;
   align-items: center;
 }
 
-.my-work-splash, .my-skills-splash, .my-cv-splash {
-  padding: 120px 0px 90px 0px;
+.page-section{
   display: flex;
   align-items: flex-start;
 }
@@ -448,10 +447,27 @@ MEDIA QUERIES
     align-items: flex-start;
   }
 
+  .my-work-splash, .my-skills-splash, .my-cv-splash {
+    padding: 90px 0px;
+  }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+
+  .page-section {
+    padding: 100px 0px;
+  }
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
   .inner {
     flex-direction: row;
   }
@@ -464,18 +480,6 @@ MEDIA QUERIES
   .section-title {
     width: 25%;
     padding: 0px;
-  }
-
-  .my-work-splash, .my-cv-splash {
-    padding: 100px 0px;
-  }
-
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-  .nav-link {
-    padding: 0.5rem 1rem;
   }
 
   
